@@ -1,6 +1,65 @@
-* , *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { margin: 0; min-width: 320px; font-family: Arial, sans-serif; color: #171717; background: #f5f4ef; }
-a { color: inherit; }
-button, input, textarea, select { font: inherit; }
-body{padding:48px}.page{max-width:900px;margin:0 auto}.card{margin-top:24px;padding:24px;border:1px solid #aaa;background:#fff}.card h2{color:#171717}.card .hint{color:#6c5ce7}.filter{display:grid;gap:16px;margin-top:40px;padding:24px;background:#d8ff55}/* TODO combinators, attributes, :not/:is/:has */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family: Arial, sans-serif;
+  color: #171717;
+  background: #f5f4ef;
+}
+a {
+  color: inherit;
+}
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+body {
+  padding: 48px;
+}
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.card {
+  margin-top: 24px;
+  padding: 24px;
+  border: 1px solid #aaa;
+  background: #fff;
+}
+.card {border-color: #6c5ce7;}
+.card {border-color: #d8ff55;}
+p{color: #171717;}
+.text {color: aqua;}
+#intro{color: brown;}
+section p{}
+section >p{}
+label+input{}
+input[type="email"] { }
+input[required] { }
+a[target="_blank";] { }
+.card h2 {
+  color: #171717;
+}
+.card .hint {
+  color: #6c5ce7;
+}
+.filter {
+  display: grid;
+  gap: 16px;
+  margin-top: 40px;
+  padding: 24px;
+  background: #d8ff55;
+} 
+.card:not(.card--featured) { }
+
+.card:is(.card--featured) { }
+.card:has(a:hover) { }
